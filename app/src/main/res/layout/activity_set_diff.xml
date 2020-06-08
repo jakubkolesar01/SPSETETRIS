@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".SetDiff">
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="250dp"
+        android:layout_height="59dp"
+        android:background="@drawable/back"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="INSERT YOUR NAME HERE"
+        android:inputType="textPersonName"
+        android:padding="0dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#D6D6D6"
+        android:textColorLink="#FFFFFF" />
+
+    <ImageView
+        android:id="@+id/zaciatocnik"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        app:srcCompat="@drawable/beginner" />
+
+    <ImageView
+        android:id="@+id/miernepokrocily"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        app:srcCompat="@drawable/intermediate" />
+
+    <ImageView
+        android:id="@+id/pokrocily"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        app:srcCompat="@drawable/pro" />
+</LinearLayout>

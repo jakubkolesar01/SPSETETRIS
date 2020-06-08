@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout   xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:weightSum="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/relativelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3">
+
+            <ImageButton
+                android:id="@+id/rightButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_above="@+id/downButton"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="40dp"
+                android:src="@drawable/arrowright" />
+
+            <ImageButton
+                android:id="@+id/downButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignStart="@+id/rotateButton"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="0dp"
+                android:src="@drawable/arrowdown" />
+
+            <ImageButton
+                android:id="@+id/rotateButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_above="@+id/rightButton"
+                android:layout_toStartOf="@+id/rightButton"
+                android:src="@drawable/arrowrotate" />
+
+            <ImageButton
+                android:id="@+id/leftButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_above="@+id/downButton"
+                android:layout_toStartOf="@+id/downButton"
+                android:src="@drawable/arrowleft" />
+
+            <TextView
+                android:id="@+id/textViewPunkte"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/textViewHighscore"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="31dp"
+                android:text="Points:"
+                android:textColor="#FFFFFF"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/textViewHighscore"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:layout_above="@+id/rotateButton"
+                android:text="Highscore:"
+                android:textColor="#FFFFFF"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/levelText"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textViewPunkte"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="182dp"
+                android:text="Level:"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativelayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7">
+
+            <Button
+                android:id="@+id/buttonstart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="113dp"
+                android:text="Start" />
+
+            <Button
+                android:id="@+id/buttonreset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="17dp"
+                android:layout_marginBottom="178dp"
+                android:text="Reset" />
+
+            <Button
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="17dp"
+                android:layout_marginBottom="51dp"
+                android:onClick="goback"
+                android:text="Back" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

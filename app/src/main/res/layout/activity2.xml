@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_red_light">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        > </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
