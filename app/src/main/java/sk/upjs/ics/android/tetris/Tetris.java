@@ -33,10 +33,11 @@ public class Tetris extends View implements View.OnClickListener{
     private int timerPeriod =250;
     private int level=0;
     private boolean pause;
+    private int diff;
 
-    public Tetris(Context context, NextPieceView nextPieceView, GameBoard gameBoard) {
+    public Tetris(Context context, NextPieceView nextPieceView, GameBoard gameBoard, int diff) {
         super(context);
-
+        this.diff = diff;
         this.mainActivity = (MainActivity) context;
         this.nextPieceView=nextPieceView;
         this.gameBoard =  gameBoard;
@@ -78,7 +79,10 @@ public class Tetris extends View implements View.OnClickListener{
 
                         if(gameOver()==false && mainActivity.getPause()==false ) {
 
-                            gameBoard.moveDown(gameBoard.getCurrentPiece());
+                            for (int i = 0; i < diff; i++) {
+                                if (gameBoard.can_Move_Down(gameBoard.getCurrentPiece()))
+                                    gameBoard.moveDown(gameBoard.getCurrentPiece());
+                            }
 
                             if (gameBoard.can_Move_Down(gameBoard.getCurrentPiece()) == false) {
                                 int deletedRows = gameBoard.clearRows();

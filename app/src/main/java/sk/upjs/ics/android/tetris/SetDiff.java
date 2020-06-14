@@ -13,11 +13,12 @@ public class SetDiff extends AppCompatActivity {
     ImageView zaciatocnik,miernepokrocily,pokrocily;
     EditText name;
     Highscores highscores;
+    private Intent start;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         final Toast toastik = Toast.makeText(this,"ZADAJTE MENO",Toast.LENGTH_SHORT);
-        final Intent start = new Intent(SetDiff.this, MainActivity.class);
+        start = new Intent(SetDiff.this, MainActivity.class);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_diff);
         zaciatocnik=(ImageView) findViewById(R.id.zaciatocnik);
@@ -33,6 +34,7 @@ public class SetDiff extends AppCompatActivity {
                 }
                 else {
                     highscores.setCurrentName(name.getText().toString());
+                    start.putExtra("Difficulty", 1);
                     startActivity(start);
                 }
             }
@@ -45,6 +47,7 @@ public class SetDiff extends AppCompatActivity {
                 }
                 else {
                     highscores.setCurrentName(name.getText().toString());
+                    start.putExtra("Difficulty", 2);
                     startActivity(start);
                 }
             }
@@ -57,6 +60,7 @@ public class SetDiff extends AppCompatActivity {
                 }
                 else {
                     highscores.setCurrentName(name.getText().toString());
+                    start.putExtra("Difficulty", 3);
                     startActivity(start);
                 }
             }

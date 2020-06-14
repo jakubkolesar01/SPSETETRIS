@@ -62,7 +62,8 @@ public class MainActivity extends AppCompatActivity {
         nextPieceView.setBackgroundColor(Color.YELLOW);
         relativeSteinAnzeige.addView(nextPieceView);
 
-        tetris = new Tetris(this,nextPieceView, gameBoard);
+        int diff = getIntent().getIntExtra("Difficulty", 1);
+        tetris = new Tetris(this,nextPieceView, gameBoard, diff);
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(480, 900);
         tetris.setLayoutParams(params);
         RelativeLayout relativeTetris = (RelativeLayout) findViewById(R.id.relativelayout);
